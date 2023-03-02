@@ -4,15 +4,11 @@ public class usluSayiHesaplama {
 
   static int us(int taban, int us){
 
-    for(int i=us; i<1 ; i++){
-
-      
-
+    if( taban == 1 ){
+      return 0;
     }
 
-
-
-    return 1;
+    return us(taban, us);
 
   }
 
@@ -27,6 +23,9 @@ public class usluSayiHesaplama {
 
     System.out.print("Üs değeri giriniz : ");
     us = input.nextInt();
+
+    int cevap = us(taban, us);
+    System.out.println(cevap);
 
 
 
